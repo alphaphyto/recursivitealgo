@@ -1,0 +1,22 @@
+Algorithme estPalindrome(mot):
+    // Vérifier si le mot est vide ou a un seul caractère
+    Si Longueur(mot) <= 1:
+        Retourner Vrai // Mot vide ou un seul caractère, c'est un palindrome
+
+    // Initialiser les indices de début et de fin
+    debut <- 0
+    fin <- Longueur(mot) - 1
+
+    // Boucle jusqu'à ce que les indices se croisent
+    Tant que debut < fin:
+        // Comparer les caractères aux extrémités
+        Si mot[debut] ≠ mot[fin]:
+            Retourner Faux // Les caractères sont différents, ce n'est pas un palindrome
+        
+        // Avancer et reculer les indices
+        debut <- debut + 1
+        fin <- fin - 1
+
+    // Si la boucle se termine sans retour, le mot est un palindrome
+    Retourner Vrai
+Fin de l'algorithme
